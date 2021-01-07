@@ -9,6 +9,8 @@ public class InsertionInTrie {
 	
 	public static void main(String[] args) {
 		
+		
+		
 		String a="airk";
 		Trie root=new Trie();
 		insert(root, a,0);

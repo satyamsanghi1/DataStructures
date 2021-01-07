@@ -35,6 +35,7 @@ class Triee
 
 		for(char c:word.toCharArray())
 		{
+		
 			Triee t2=t.map.get(c);
 			if(t2==null)
 			{
