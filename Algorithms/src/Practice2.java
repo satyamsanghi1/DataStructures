@@ -4,12 +4,20 @@ import java.util.Map;
 public class Practice2 {
 
 	
+	private  Practice2() {
+		
+	}
 	public static void main(String[] args) {
 		
 		Map<Integer,Integer>map=new HashMap<>();
 		
 		System.out.println(fib(5,map));
 	
+		String s="satyam";
+		char c[]=s.toCharArray();
+		
+		String ans=new String(c);
+		System.out.println(ans);
 	}
 	
 	public static int fib(int n,Map<Integer,Integer>map)
@@ -29,4 +37,6 @@ public class Practice2 {
 		map.put(n,x);
 		return x;
 	}
+	
+	
 }

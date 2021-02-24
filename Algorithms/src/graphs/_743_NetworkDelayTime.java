@@ -14,8 +14,6 @@ public class _743_NetworkDelayTime {
 	}
 	 public static int networkDelayTime(int[][] times, int N, int K) {
 	        
-		 
-		
 		 K--;
 		 int matrix[][]=new int [N][N];
 		 for(int i=0;i<times.length;i++)
