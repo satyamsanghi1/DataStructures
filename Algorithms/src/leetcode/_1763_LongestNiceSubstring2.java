@@ -3,13 +3,15 @@ package leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
+
 public class _1763_LongestNiceSubstring2 {
 
 	public static void main(String[] args) {
 	
 		
+		System.out.println('a'-'a');
 		String s="YazaAay";
-	
+
 		String ans=longestNiceSubstring(s);
 		System.out.println("ans "+ans);
 	}

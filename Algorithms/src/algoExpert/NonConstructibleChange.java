@@ -6,66 +6,48 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class NonConstructibleChange {
-	//mysolution working
+	//algoexpert solution
 	public static void main(String[] args) {
 
 
-		int []coins=new int[] {1,1,1,1,1};
+		int []coins=new int[] {1,1,2,3,5,7,22};
 
 		int ans=nonConstructibleChange(coins);
 		System.out.println("ans "+ans);
 	}
 	public static int nonConstructibleChange(int[] coins) {
 
-
-		ArrayList<Integer>list=new ArrayList<>();
-		Set<Integer>set=new HashSet<Integer>();
-
+		/*
+		 * reason for change+1
+		 * 
+		 * if we have 1 coin ,
+		 * means change we can create at this time is 1 
+		 * 
+		 * next we need to create a change of 2 minimum,
+		 * so we need either a coin of 2 or less 
+		 * 
+		 * our change was 1  , coin required is 2 or less ,
+		 * if we are given 3  , then we wont be able to make change of 2
+		 * 
+		 * coin>change+1
+		 * coin>1+1
+		 * because ,there can be coin of 2 , in that case it will work
+		 * 
+		 * if coin is greater than 2 (change+1) , then it is problem
+		 * we will not be able to create a change of 2 
+		 */
 		Arrays.sort(coins);
-		int count=1;
-		int sum=0;
-		for(int i=0;i<coins.length;i++)
+		int change=0;
+		
+		for(int i:coins)
 		{
-			sum+=coins[i];
-			System.out.println("coin "+coins[i]);
-
-			int size=0;
-
-
-			size=list.size();
-			list.add(coins[i]);
-
-			int lastAdded=list.get(list.size()-1);
-			if(set.add(lastAdded))
-			{
-				if( count!=lastAdded)
-					return count;
-				count++;
-				System.out.println("count in set before "+count);
-			}
-			for(int z=0;z<size;z++)
-			{
-				list.add(list.get(z)+coins[i]);
-				 lastAdded=list.get(list.size()-1);
-
-				if(set.add(lastAdded))
-				{
-					System.out.println("last added "+lastAdded);
-					if( count!=lastAdded)
-						return lastAdded;
-					count++;
-					System.out.println("count in set "+count);
-				}
-
-
-				// System.out.println("current "+current);
-			}
-			System.out.println("outside for");
-
-			System.out.println(list);
-			System.out.println("----------");
+			if(i>(change+1))
+			return (change+1);
+			change+=i;
+			System.out.println("current coin "+i+" change "+change);
 		}
-		return sum+1;
+		
+		return change+1;
 
 	}
 
