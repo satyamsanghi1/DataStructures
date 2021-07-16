@@ -1,3 +1,4 @@
+/multithreading/
 /AddOneInLinkedList.class
 /AliceMarks.class
 /AnagramUsingHashmap.class
@@ -34,7 +35,6 @@
 /ZigZagConversion.class
 /a.class
 /algoExpert/
-/node.class
 /avlTree/
 /binaryHeap/
 /binarySearchTree/
@@ -42,6 +42,7 @@
 /bitManipulation/
 /collections/
 /dynamcProgramming/
+/node.class
 /graphs/
 /interview/
 /leetcode/

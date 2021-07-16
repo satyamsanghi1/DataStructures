@@ -4,18 +4,47 @@ public class KadaneAlgoForMaximumSubArraySum {
 	
 	public static void main(String[] args) {
 		
+		int a[]= {-2,1,-3,4,-1,2,1,-5,4};
 		
+		kadane(a);
 		//int a[]= {-2,-3,4,-1,-2,1,5,-3};
 		
-		int a[]= {3,-2,5,-1};
+		//int a[]= {3,-2,5,-1};
 		//int x=MaximumSumSubArray(a);
 		
 		//int x=alterSolution(a,0,a.length-1,0);
-		bruteForce(a);
+		//bruteForce(a);
 		//dSystem.out.println("Maximum SubArray Sum "+x);
 	}
 	
-	
+	public static void kadane(int a[])
+	{
+		//revision coding
+		int max=Integer.MIN_VALUE;
+		int currentSum=0;
+		
+		int start=0;
+		int end=0;
+		int curStart=0;
+		
+		for(int i=0;i<a.length;i++)
+		{
+			currentSum+=a[i];
+			
+			if(currentSum>max)
+			{
+				max=currentSum;
+				start=curStart;
+				end=i;
+			}
+			if(currentSum<0)
+			{
+				curStart=i+1;
+				currentSum=0;
+			}
+		}
+		System.out.println("start "+start+" end "+end +" maxsum "+max);
+	}
 	public static void bruteForce(int a[])
 	{
 		int max=a[0];
