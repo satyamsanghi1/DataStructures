@@ -1,18 +1,16 @@
-package JavaConcepts.multiThreading;
+package JavaConcepts.multiThreading.Synchronization;
 
+import java.util.concurrent.atomic.AtomicInteger;
 
-class Resource
+class Resource1
 {
-	 int value=0;
-	  synchronized public  void inc() throws InterruptedException
+	  volatile int  value;
+	   public  void inc() throws InterruptedException
 	{
 		
-		for(int i=1;i<=10;i++) {
+		
 		value++;
-		Thread.sleep(500);
-		System.out.println("value "+value+" by "+Thread.currentThread().getName());
-		}
-	
+		System.out.println("Resource value after  "+value);
 	}
 }
 public class VolatileExample {
@@ -20,7 +18,7 @@ public class VolatileExample {
 	
 	public static void main(String[] args) {
 		
-		final Resource r=new Resource();
+		final Resource1 r=new Resource1();
 		
 		
 		Thread t1=new Thread(()-> {
@@ -51,6 +49,6 @@ public class VolatileExample {
 		t2.start();
 		
 		
-		System.out.println("Resource value after  "+r.value);
+	
 	}
 }
