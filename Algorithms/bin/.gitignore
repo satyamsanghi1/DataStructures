@@ -1,8 +1,3 @@
-/multithreading/
-/AddOneInLinkedList.class
-/AliceMarks.class
-/AnagramUsingHashmap.class
-/ArrayList1.class
 /Cocubes.class
 /CollectionTesting.class
 /DataStructures.class
@@ -39,10 +34,10 @@
 /binaryHeap/
 /binarySearchTree/
 /binaryTree/
+/node.class
 /bitManipulation/
 /collections/
 /dynamcProgramming/
-/node.class
 /graphs/
 /interview/
 /leetcode/

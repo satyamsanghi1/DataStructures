@@ -1,5 +1,6 @@
 package JavaConcepts;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -14,11 +15,21 @@ public class CheckedExceptionExample {
 		list.add("aj");
 		
 		
-		method1();
+		try {
+			method1();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (NullPointerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 	
-	public static void method1() throws NullPointerException
+	public static void method1() throws IOException
 	{
 		int x=0;
 		

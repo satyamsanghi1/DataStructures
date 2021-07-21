@@ -1,6 +1,8 @@
 package JavaConcepts;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.WeakHashMap;
 
 class A implements Comparable<A>
 {
@@ -22,9 +24,7 @@ public class SortingHashMapExample {
 	public static void main(String[] args) {
 		
 		
-		final ArrayList<Integer>list=new ArrayList<Integer>();
-		
-		ArrayList<Integer>list1=new ArrayList<Integer>();
+		ArrayList<Integer>list=new ArrayList<Integer>();
 		list.add(1);
 		list.add(2);
 		

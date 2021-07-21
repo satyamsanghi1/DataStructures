@@ -5,6 +5,16 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+class AgeComparator implements Comparator<Student>
+{
+
+	@Override
+	public int compare(Student o1, Student o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
 class Student { 
 	  
     // instance member variables 
@@ -61,7 +71,8 @@ public class ImplementingComparator {
         al.add(obj4); 
         al.add(obj5); 
         al.add(obj6); 
-  
+       
+       
         Collections.sort(al,new Comparator<Student>() {
 
 			@Override
